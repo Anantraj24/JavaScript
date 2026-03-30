@@ -1,0 +1,263 @@
+TOPIC: OPERATORS
+
+WHAT ARE OPERATORS?
+
+Operators are symbols used to perform operations on data (values or variables).
+
+Example:
+let a = 10;
+let b = 5;
+
+a + b = 15
+
+Here:
+
+is an operator
+a and b are operands
+TYPES OF OPERATORS
+
+Main categories:
+
+Arithmetic Operators
+Assignment Operators
+Comparison Operators
+Logical Operators
+Ternary Operator
+ARITHMETIC OPERATORS
+
+Used to perform mathematical operations
+
+Operators:
+
+Addition
+Subtraction
+Multiplication
+/ Division
+% Modulus (remainder)
+** Exponentiation (power)
+
+Example:
+
+let a = 10;
+let b = 3;
+
+console.log(a + b); // 13
+console.log(a - b); // 7
+console.log(a * b); // 30
+console.log(a / b); // 3.33
+console.log(a % b); // 1
+console.log(a ** b); // 1000
+
+INCREMENT & DECREMENT
+
+Increment:
+a++ (increase by 1)
+
+Decrement:
+a-- (decrease by 1)
+
+Example:
+
+let x = 5;
+x++;
+console.log(x); // 6
+
+IMPORTANT (Pre vs Post):
+
+let a = 5;
+
+console.log(a++); // 5 (use first, then increase)
+console.log(++a); // 7 (increase first, then use)
+
+ASSIGNMENT OPERATORS
+
+Used to assign values
+
+Operators:
+= assign
++= add and assign
+-= subtract and assign
+*= multiply and assign
+/= divide and assign
+%= modulus and assign
+**= power and assign
+
+Example:
+
+let a = 10;
+
+a += 5; // a = 15
+a -= 3; // a = 12
+
+COMPARISON OPERATORS
+
+Used to compare values (result is true/false)
+
+Operators:
+== equal (value only)
+=== equal (value + type)
+!= not equal
+!== not equal (value + type)
+
+greater than
+< less than
+= greater or equal
+<= less or equal
+
+Example:
+
+console.log(5 == "5"); // true
+console.log(5 === "5"); // false
+
+IMPORTANT:
+
+== → loose comparison (type conversion happens)
+=== → strict comparison (recommended)
+
+LOGICAL OPERATORS
+
+Used to combine conditions
+
+Operators:
+
+&& AND
+|| OR
+! NOT
+
+AND (&&)
+
+True only if both are true
+
+Example:
+
+true && true → true
+true && false → false
+
+OR (||)
+
+True if at least one is true
+
+Example:
+
+true || false → true
+
+NOT (!)
+
+Reverses value
+
+Example:
+
+!true → false
+
+REAL CODE:
+
+let age = 20;
+
+if (age > 18 && age < 60) {
+console.log("Adult");
+}
+
+TERNARY OPERATOR
+
+Shortcut for if-else
+
+Syntax:
+condition ? true_value : false_value
+
+Example:
+
+let age = 18;
+
+let result = age >= 18 ? "Adult" : "Minor";
+
+console.log(result);
+
+TYPE COERCION (IMPORTANT)
+
+JavaScript automatically converts types
+
+Examples:
+
+"5" + 2 → "52"
+"5" - 2 → 3
+
+Explanation:
+
+→ converts to string
+→ converts to number
+TRUTHY & FALSY VALUES
+
+Falsy values:
+false
+0
+"" (empty string)
+null
+undefined
+NaN
+
+Everything else is truthy
+
+Example:
+
+if ("hello") {
+console.log("Runs"); // true
+}
+
+SHORT-CIRCUITING
+
+Logical operators stop early
+
+Example:
+
+true || false → true (second not checked)
+false && true → false (second not checked)
+
+COMMON MISTAKES
+Using == instead of ===
+Confusing ++a and a++
+Not understanding type coercion
+Using operators on wrong data types
+INTERVIEW QUESTIONS
+Difference between == and ===
+What is type coercion?
+Difference between ++a and a++
+What are truthy and falsy values?
+CODING QUESTIONS
+
+Check even or odd:
+
+let num = 10;
+
+if (num % 2 === 0) {
+console.log("Even");
+} else {
+console.log("Odd");
+}
+
+Check multiple of 5:
+
+let num = 15;
+
+if (num % 5 === 0) {
+console.log("Multiple of 5");
+}
+
+Use ternary:
+
+let marks = 80;
+
+let grade = marks > 50 ? "Pass" : "Fail";
+
+MINI PROJECT
+
+GRADE CALCULATOR
+
+let marks = 85;
+
+let grade =
+marks >= 90 ? "A" :
+marks >= 70 ? "B" :
+marks >= 60 ? "C" :
+marks >= 50 ? "D" : "F";
+
+console.log(grade);
