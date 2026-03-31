@@ -1,0 +1,275 @@
+TOPIC: LOOPS
+
+WHAT ARE LOOPS?
+
+Loops are used to execute a block of code again and again until a condition is met.
+
+👉 Instead of writing same code multiple times, loops automate repetition.
+
+Example without loop:
+console.log("Hello");
+console.log("Hello");
+console.log("Hello");
+
+Example with loop:
+for (let i = 1; i <= 3; i++) {
+console.log("Hello");
+}
+
+WHY WE USE LOOPS?
+To avoid repetition
+To save time
+To make code clean and efficient
+
+Real-life example:
+👉 Brushing teeth daily → repeated task
+👉 Loop = repeating action automatically
+
+TYPES OF LOOPS IN JAVASCRIPT
+for loop
+while loop
+do-while loop
+for-of loop
+for-in loop
+FOR LOOP
+
+Used when number of iterations is known
+
+Syntax:
+
+for (initialization; condition; update) {
+// code
+}
+
+Example:
+
+for (let i = 1; i <= 5; i++) {
+console.log(i);
+}
+
+FLOW OF FOR LOOP:
+
+Step 1: initialization → let i = 1
+Step 2: condition → i <= 5
+Step 3: run code
+Step 4: update → i++
+Repeat
+
+VISUAL:
+
+i = 1 → print
+i = 2 → print
+i = 3 → print
+i = 4 → print
+i = 5 → print
+stop
+
+WHILE LOOP
+
+Used when number of iterations is unknown
+
+Syntax:
+
+while (condition) {
+// code
+}
+
+Example:
+
+let i = 1;
+
+while (i <= 5) {
+console.log(i);
+i++;
+}
+
+FLOW:
+
+Check condition → run → update → repeat
+
+DO-WHILE LOOP
+
+Runs at least once (even if condition is false)
+
+Syntax:
+
+do {
+// code
+} while (condition);
+
+Example:
+
+let i = 1;
+
+do {
+console.log(i);
+i++;
+} while (i <= 5);
+
+IMPORTANT:
+
+Even if condition is false initially, code runs once
+
+FOR-OF LOOP
+
+Used for iterating over iterable values (strings, arrays)
+
+Syntax:
+
+for (let value of iterable) {
+// code
+}
+
+Example:
+
+let str = "hello";
+
+for (let char of str) {
+console.log(char);
+}
+
+Output:
+h e l l o
+
+FOR-IN LOOP
+
+Used for iterating over object keys
+
+Syntax:
+
+for (let key in object) {
+// code
+}
+
+Example:
+
+let student = {
+name: "Anant",
+age: 20
+};
+
+for (let key in student) {
+console.log(key, student[key]);
+}
+
+INFINITE LOOP
+
+A loop that never ends
+
+Example:
+
+while (true) {
+console.log("Infinite");
+}
+
+❌ Dangerous → can crash browser/system
+
+BREAK AND CONTINUE
+
+BREAK:
+Stops loop completely
+
+Example:
+
+for (let i = 1; i <= 5; i++) {
+if (i === 3) break;
+console.log(i);
+}
+
+Output:
+1 2
+
+CONTINUE:
+Skips current iteration
+
+Example:
+
+for (let i = 1; i <= 5; i++) {
+if (i === 3) continue;
+console.log(i);
+}
+
+Output:
+1 2 4 5
+
+NESTED LOOPS
+
+Loop inside another loop
+
+Example:
+
+for (let i = 1; i <= 3; i++) {
+for (let j = 1; j <= 2; j++) {
+console.log(i, j);
+}
+}
+
+REAL-LIFE USE CASES
+Printing lists
+Processing arrays
+Games (loop until correct answer)
+Repeating tasks
+
+Example:
+
+Guessing game:
+
+let correct = 5;
+let guess;
+
+while (guess !== correct) {
+guess = prompt("Enter number");
+}
+
+COMMON MISTAKES
+Forgetting update (i++) → infinite loop
+Wrong condition
+Using wrong loop type
+Off-by-one errors
+INTERVIEW QUESTIONS
+Difference between for and while
+What is infinite loop?
+Difference between break and continue
+for-of vs for-in
+CODING QUESTIONS
+
+Print even numbers 0 to 100:
+
+for (let i = 0; i <= 100; i++) {
+if (i % 2 === 0) {
+console.log(i);
+}
+}
+
+Sum of numbers 1 to 10:
+
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+sum += i;
+}
+
+console.log(sum);
+
+MINI PROJECT
+
+NUMBER GUESSING GAME
+
+let correctNumber = 7;
+let guess;
+
+while (guess !== correctNumber) {
+guess = prompt("Guess the number:");
+}
+
+console.log("Correct!");
+
+QUICK SUMMARY
+Loops repeat code
+for → known iterations
+while → unknown iterations
+do-while → runs at least once
+for-of → values
+for-in → keys
+break → stop loop
+continue → skip iteration
