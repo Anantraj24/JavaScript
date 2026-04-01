@@ -1,0 +1,211 @@
+TOPIC: ARRAYS
+
+WHAT IS AN ARRAY?
+
+An array is a special variable used to store multiple values in a single variable.
+
+👉 Instead of creating many variables:
+
+let a = 10;
+let b = 20;
+let c = 30;
+
+👉 Use array:
+
+let arr = [10, 20, 30];
+
+Real-life example:
+👉 A student list in a class
+👉 A shopping cart with multiple items
+
+WHY USE ARRAYS?
+Store multiple values together
+Easy to manage data
+Useful in loops and real-world applications
+ARRAY SYNTAX
+let arr = [value1, value2, value3];
+
+Example:
+
+let fruits = ["apple", "banana", "mango"];
+ARRAY INDEX
+
+Each element has a position (index)
+
+Index:   0        1        2
+Value: ["apple", "banana", "mango"]
+
+👉 Index always starts from 0
+
+Access elements:
+
+console.log(fruits[0]); // apple
+console.log(fruits[2]); // mango
+MODIFYING ARRAYS
+let arr = [10, 20, 30];
+
+arr[1] = 50;
+
+console.log(arr); // [10, 50, 30]
+ARRAY PROPERTIES
+
+Length:
+
+let arr = [1, 2, 3];
+
+console.log(arr.length); // 3
+ARRAY METHODS (VERY IMPORTANT)
+
+ADD ELEMENTS:
+
+push() → add at end
+
+arr.push(40);
+
+unshift() → add at beginning
+
+arr.unshift(5);
+
+REMOVE ELEMENTS:
+
+pop() → remove from end
+
+arr.pop();
+
+shift() → remove from beginning
+
+arr.shift();
+LOOPING OVER ARRAYS
+
+Using for loop:
+
+let arr = [10, 20, 30];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+Using for-of:
+
+for (let value of arr) {
+  console.log(value);
+}
+IMPORTANT ARRAY METHODS
+
+toString()
+
+arr.toString();
+
+concat()
+
+let a = [1, 2];
+let b = [3, 4];
+
+let result = a.concat(b);
+
+slice()
+
+arr.slice(1, 3);
+
+👉 returns part of array (does not change original)
+
+splice() (VERY IMPORTANT)
+
+arr.splice(start, deleteCount, newValue);
+
+Example:
+
+let arr = [1, 2, 3, 4];
+
+arr.splice(1, 2); // removes 2 elements
+ARRAY IS OBJECT (IMPORTANT)
+typeof [1, 2, 3]; // "object"
+
+👉 Arrays are special objects in JS
+
+VISUAL UNDERSTANDING
+arr = [10, 20, 30]
+
+Memory:
+arr → [10, 20, 30]
+
+Index:
+0 → 10
+1 → 20
+2 → 30
+COMMON MISTAKES
+Accessing wrong index
+Forgetting index starts from 0
+Confusing slice and splice
+Thinking arrays are primitive
+INTERVIEW QUESTIONS
+Difference between slice() and splice()
+What is array index?
+How to loop through array?
+Is array primitive or object?
+CODING QUESTIONS
+
+Find sum of array:
+
+let arr = [1, 2, 3, 4];
+
+let sum = 0;
+
+for (let val of arr) {
+  sum += val;
+}
+
+console.log(sum);
+
+Find largest number:
+
+let arr = [10, 50, 30];
+
+let max = arr[0];
+
+for (let val of arr) {
+  if (val > max) {
+    max = val;
+  }
+}
+
+console.log(max);
+MINI PROJECT
+
+TODO LIST USING ARRAY
+
+let todo = [];
+
+// add tasks
+todo.push("Study JS");
+todo.push("Practice");
+
+// remove task
+todo.pop();
+
+console.log(todo);
+ADVANCED CONCEPTS (IMPORTANT)
+
+ARRAY REFERENCE BEHAVIOR
+
+let arr1 = [1, 2];
+let arr2 = arr1;
+
+arr2.push(3);
+
+console.log(arr1); // [1,2,3]
+
+👉 Both point to same array (reference)
+
+COPY ARRAY PROPERLY
+
+let arr1 = [1, 2];
+let arr2 = [...arr1];
+QUICK SUMMARY
+Array stores multiple values
+Index starts from 0
+Use push/pop for add/remove
+slice = copy
+splice = modify
+Arrays are objects
+Use loops to traverse
