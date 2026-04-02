@@ -1,0 +1,199 @@
+TOPIC: DOM MANIPULATION
+
+WHAT IS DOM?
+
+DOM stands for Document Object Model.
+
+👉 It represents the HTML page as a tree structure that JavaScript can access and modify.
+
+Real-life example:
+👉 Think of a website like a tree 🌳
+
+Root → HTML
+Branches → tags
+Leaves → content
+WHY DOM IS USED?
+To change content dynamically
+To respond to user actions
+To create interactive websites
+
+Example:
+👉 Clicking a button changes text
+👉 Showing/hiding elements
+
+DOM STRUCTURE (VISUAL)
+HTML
+
+│
+├── head
+│
+└── body
+    ├── h1
+    ├── p
+    └── button
+
+👉 JavaScript can access any element in this tree
+
+SELECTING ELEMENTS
+
+getElementById()
+
+let heading = document.getElementById("title");
+
+getElementsByClassName()
+
+let items = document.getElementsByClassName("item");
+
+getElementsByTagName()
+
+let divs = document.getElementsByTagName("div");
+
+querySelector() (MOST USED)
+
+let element = document.querySelector(".className");
+
+querySelectorAll()
+
+let elements = document.querySelectorAll("p");
+CHANGING CONTENT
+
+innerText
+
+element.innerText = "Hello";
+
+innerHTML
+
+element.innerHTML = "<b>Hello</b>";
+
+textContent
+
+element.textContent = "Hello";
+CHANGING STYLES
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+ATTRIBUTES MANIPULATION
+
+getAttribute()
+
+element.getAttribute("id");
+
+setAttribute()
+
+element.setAttribute("class", "newClass");
+
+removeAttribute()
+
+element.removeAttribute("class");
+ADDING & REMOVING ELEMENTS
+
+createElement()
+
+let newDiv = document.createElement("div");
+
+append()
+
+parent.append(newDiv);
+
+prepend()
+
+parent.prepend(newDiv);
+
+remove()
+
+element.remove();
+EVENT HANDLING
+
+👉 Events = user actions
+
+Examples:
+
+click
+input
+submit
+
+addEventListener()
+
+btn.addEventListener("click", function() {
+  console.log("Button clicked");
+});
+REAL-LIFE EXAMPLE
+
+BUTTON CLICK
+
+HTML:
+
+<button id="btn">Click Me</button>
+<p id="text">Hello</p>
+
+JS:
+
+let btn = document.querySelector("#btn");
+let text = document.querySelector("#text");
+
+btn.addEventListener("click", function() {
+  text.innerText = "Changed!";
+});
+VISUAL FLOW
+User clicks button
+        ↓
+Event triggered
+        ↓
+JavaScript runs
+        ↓
+DOM updates
+        ↓
+Page changes
+COMMON MISTAKES
+Using wrong selectors
+Forgetting # for id and . for class
+Using innerHTML unnecessarily
+Not waiting for DOM to load
+INTERVIEW QUESTIONS
+What is DOM?
+Difference between innerText and innerHTML
+querySelector vs querySelectorAll
+What is event listener?
+CODING QUESTIONS
+
+Change text:
+
+document.querySelector("p").innerText = "New Text";
+
+Change color:
+
+document.querySelector("h1").style.color = "blue";
+
+Add element:
+
+let div = document.createElement("div");
+div.innerText = "Hello";
+
+document.body.append(div);
+MINI PROJECT
+
+CLICK COUNTER
+
+HTML:
+
+<button id="btn">Click</button>
+<p id="count">0</p>
+
+JS:
+
+let count = 0;
+
+let btn = document.querySelector("#btn");
+let display = document.querySelector("#count");
+
+btn.addEventListener("click", function() {
+  count++;
+  display.innerText = count;
+});
+QUICK SUMMARY
+DOM = HTML structure as objects
+JS can access and modify elements
+Use querySelector for selection
+innerText / innerHTML for content
+style for design
+addEventListener for actions
+createElement for new elements
